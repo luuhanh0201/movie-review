@@ -30,12 +30,12 @@ const SignUp: React.FC = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please input your username!',
+                                message: 'Please input your full name!',
                             },
                         ]}
                     >
                         <Input
-                            placeholder="User name"
+                            placeholder="Full Name"
                             className="py-2 border-primaryColor" />
                     </Form.Item>
                     <Form.Item<FieldType>

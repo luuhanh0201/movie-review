@@ -9,22 +9,24 @@ function App() {
   type LayoutType = any
 
   return (
-    <Router>
-      <Routes>
-        {
-          publicRoutes.map((route, index) => {
-            let Layout: LayoutType = DefaultLayout;
-            if (route.layout) {
-              Layout = route.layout
-            } else if (route.layout === null) {
-              Layout = Fragment
-            }
-            const Page = route.component
-            return <Route key={index} path={route.path} element={<Layout><Page /></Layout>} />
-          })
-        }
-      </Routes>
-    </Router>
+    <div className="bg-black/90">
+      <Router>
+        <Routes>
+          {
+            publicRoutes.map((route, index) => {
+              let Layout: LayoutType = DefaultLayout;
+              if (route.layout) {
+                Layout = route.layout
+              } else if (route.layout === null) {
+                Layout = Fragment
+              }
+              const Page = route.component
+              return <Route key={index} path={route.path} element={<Layout><Page /></Layout>} />
+            })
+          }
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
