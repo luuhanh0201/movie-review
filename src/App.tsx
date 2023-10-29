@@ -1,31 +1,19 @@
 // import { Route, Routes } from "react-router-dom"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { publicRoutes } from "./routers";
-import DefaultLayout from "./components/Layout/DefaultLayout";
-import { Fragment } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routers";
 import "animate.css";
+import { ConfigProvider } from 'antd';
+import viVN from 'antd/es/locale/vi_VN';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  type LayoutType = any
-
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
-    <div className="bg-black/90">
-      <Router>
-        <Routes>
-          {
-            publicRoutes.map((route, index) => {
-              let Layout: LayoutType = DefaultLayout;
-              if (route.layout) {
-                Layout = route.layout
-              } else if (route.layout === null) {
-                Layout = Fragment
-              }
-              const Page = route.component
-              return <Route key={index} path={route.path} element={<Layout><Page /></Layout>} />
-            })
-          }
-        </Routes>
-      </Router>
+    <div className="">
+      <ConfigProvider locale={viVN}>
+        <Router>
+          <AppRoutes />
+        </Router>
+      </ConfigProvider>
     </div>
   )
 }

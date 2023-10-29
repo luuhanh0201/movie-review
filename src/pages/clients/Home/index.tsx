@@ -16,7 +16,7 @@ import JustRelease from './JustRelease';
 //     textAlign: 'center',
 //     background: '#364d79',
 // };
-console.log("Log file: index");
+// console.log("Log file: index");
 
 function HomePage() {
     const slideComponent = useMemo(() => <SlideHome />, [])

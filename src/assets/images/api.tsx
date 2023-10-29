@@ -1,0 +1,1 @@
+export const URL_DB_ACCOUNT = "http://localhost:8888/api/auth"

@@ -6,14 +6,13 @@ function SlideHome() {
     // const onChange = (currentSlide: number) => {
     //     // console.log(currentSlide);
     // };
-    console.log("Log file FeaturedMovie");
 
     return (
         <div style={{
             height: "400px",
             width: "1250px",
            
-        }} className='w-full my-8' >
+        }} className='w-full mb-8' >
             <Carousel autoplay={true}    >
                 <div style={{ height: "400px" }} className=' relative select-none' >
                     <img style={{ height: "400px" }} className='h-full w-full rounded-md' src={"https://giffiles.alphacoders.com/208/208650.gif"} alt="" />

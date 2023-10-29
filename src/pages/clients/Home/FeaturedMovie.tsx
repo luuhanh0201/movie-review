@@ -39,13 +39,13 @@ function FeaturedMovie() {
         setInfoFeaturedMovie(movie)
 
     }
-    console.log("Log file: FeaturedMovie");
+    // console.log("Log file: FeaturedMovie");
 
 
     return (
 
 
-        < div className='h-96 mt-4  rounded-md flex bg-no-repeat w-full bg-cover bg-center relative items-center pl-8' style={{
+        < div className='h-96 mt-4  rounded-md flex bg-no-repeat w-full bg-cover bg-center relative items-center pl-8 ' style={{
             backgroundImage: `url('${infoFeaturedMovie.bg}')`,
 
         }
@@ -68,14 +68,14 @@ function FeaturedMovie() {
                 </div>
             </div>
             {/* List movie */}
-            <div className='flex-1 overflow-hidden flex'>
+            <div className='flex-1 overflow-hidden flex '>
                 {/* items */}
 
                 {
                     listMovie.map(({ id, name, bg }) => {
                         return (
-                            <div onClick={() => handleGetInfoMovie(id)} key={id} className={` duration-300 mx-2 w-2/5 ${id === infoFeaturedMovie.id ? "border-green-500" : ""} bg-white h-72 relative overflow-hidden rounded-lg border-2  border-gray-500`}>
-                                <img className='w-full h-full' src={bg} alt="" />
+                            <div onClick={() => handleGetInfoMovie(id)} key={id} className={`mx-2 w-2/5 ${id === infoFeaturedMovie.id ? "border-green-500" : ""} duration-300 bg-white h-72 relative overflow-hidden rounded-lg border-2  border-gray-500`}>
+                                <img className='w-full h-full  duration-300' src={bg} alt="" />
                                 {/* Info */}
                                 <div className='absolute text-white bottom-4 left-2 text-sm'>
                                     <Link to={""} className='line-clamp-1 leading-1 mb-2 hover:text-green-500 duration-300'>{name}</Link>
